@@ -4,7 +4,7 @@
 const int n = 4; // kanal sayısı
 int analogPin[n] = { A0, A1, A2, A3 }; // array
 byte kanal[n]; // kanal[0], kanal[1], kanal[2] ve kanal[3]
-RF24 radio(7, 8); // digital pins that CE and CSN are connected.
+RF24 radio(7,8); // digital pins that CE and CSN are connected.
 const uint64_t pipe = 0xE8E8F0F0E1LL; // the address of the modem, that will receive data from Arduino
 const int T = 20; // PPM sinyali periyodu. Normalde 22ms fakat NRF24L01 kablosuz haberleşmede gecikmeler olduğundan 20 yaptım.
 

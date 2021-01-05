@@ -5,16 +5,10 @@ n = 4; % kanal sayısı, drone projesi 4 yapmalı
 PPMsinyalPeriod = 22; % ms
 PPMsinyal = uint16(zeros(n,1));
 i = 0; % paket numarası - her paket {'h', kanal(1), kanal(2), ...}
-zaman = 0; stopTime = 45; % saniye
+zaman = 0; stopTime = 40; % saniye
 ppmPeriod = 22; % ms
 
-figure(1); set(figure(1), 'position', [241  357  945  420]);
-hold on;
-xlabel('zaman (ms)');
-ylabel('ppm sinyali (V)');
-axis([0 PPMsinyalPeriod -0.5 5.5]);
-grid on; ax = gca; ax.GridLineStyle = '--';
-% set(gca,'position', [0.0719    0.1100    0.9027    0.8150]);
+set_PPM_signal_graph(PPMsinyalPeriod);
 
 tic;
 while (true)
